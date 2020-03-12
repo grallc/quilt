@@ -24,9 +24,6 @@ export const polyfills: {[polyfill: string]: PolyfillDescriptor} = {
   'unhandled-rejection': {
     featureTest: 'unhandledrejection',
   },
-  url: {
-    featureTest: 'urlsearchparams',
-  },
 };
 
 export function mappedPolyfillsForEnv(
@@ -50,8 +47,6 @@ export function mappedPolyfillsForEnv(
 
       return mappedPolyfills;
     },
-    {
-      '@shopify/polyfills/base$': `${prefix}/base`,
-    },
+    {},
   );
 }
